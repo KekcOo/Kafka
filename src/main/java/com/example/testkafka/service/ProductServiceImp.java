@@ -1,6 +1,7 @@
 package com.example.testkafka.service;
 
 import com.example.testkafka.service.Dto.CreateProductDto;
+
 import com.example.testkafka.service.event.ProductCreateEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +10,7 @@ import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
+
 import java.util.concurrent.ExecutionException;
 
 @Service
@@ -17,7 +18,7 @@ import java.util.concurrent.ExecutionException;
 @Slf4j
 public class ProductServiceImp implements ProductService{
 
-    private final  KafkaTemplate<String,ProductCreateEvent> kafkaTemplate;
+    private final  KafkaTemplate<String, ProductCreateEvent> kafkaTemplate;
 
 
     @Override
